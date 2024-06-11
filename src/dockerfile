@@ -1,17 +1,24 @@
-# Usar una imagen oficial de Python como imagen base
+# Use an official Python image as the base image
 FROM python:3.9-slim
 
-# Establecer el directorio de trabajo en el contenedor
+# Set the working directory in the container
 WORKDIR /app
 
-# Copiar el contenido del directorio actual al directorio de trabajo en el contenedor
+# Install necessary system dependencies for mysqlclient
+RUN apt-get update && apt-get install -y \
+    gcc \
+    libmariadb-dev-compat \
+    libmariadb-dev \
+    pkg-config
+
+# Copy the contents of the current directory to the working directory in the container
 COPY . /app
 
-# Instalar las dependencias necesarias
+# Install the required Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Exponer el puerto 8000 para la aplicación
+# Expose port 8000 for the application
 EXPOSE 8000
 
-# Definir el comando para ejecutar la aplicación cuando se inicie el contenedor
+# Define the command to run the application when the container starts
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
