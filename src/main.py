@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from typing import List
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import uvicorn
 import os
 
 from models.user import User
@@ -17,8 +18,8 @@ from models.bill import Bill
 app = FastAPI(title="StayCation DB API", description="API for StayCation Database", version="0.1")
 
 # Database URLs from environment variables
-mysql_db_url = os.getenv("MYSQL_DB_URL", "mysql://root:P4ssw0rd@localhost:3306/staycation")
-postgresql_db_url = os.getenv("POSTGRESQL_DB_URL", "postgresql://postgres:P4ssw0rd@localhost:5432/staycation")
+mysql_db_url = os.getenv("MYSQL_DB_URL", "mysql://root:P4ssw0rd@mysql_db:3306/staycation")
+postgresql_db_url = os.getenv("POSTGRESQL_DB_URL", "postgresql://postgres:P4ssw0rd@postgres_db:5432/staycation")
 
 # Create engines and sessions for both databases
 mysql_engine = create_engine(mysql_db_url)
@@ -525,5 +526,4 @@ def get_properties_with_pool_postgresql():
     return properties
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

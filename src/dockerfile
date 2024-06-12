@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install -y \
     gcc \
     libmariadb-dev-compat \
     libmariadb-dev \
-    pkg-config
+    pkg-config \
+    && apt-get clean
 
-# Copy the contents of the current directory to the working directory in the container
+# Copy the content of the current directory to the working directory in the container
 COPY . /app
 
 # Install the required Python dependencies
@@ -21,4 +22,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Define the command to run the application when the container starts
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--ssl-keyfile", "/app/configs/server.key", "--ssl-certfile", "/app/configs/server.crt"]

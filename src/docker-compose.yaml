@@ -11,11 +11,13 @@ services:
     depends_on:
       - mysql_db
       - postgres_db
+    volumes:
+      - ./configs:/app/configs
 
   mysql_db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: P4ssw0rd
       MYSQL_DATABASE: staycation
     ports:
       - "3306:3306"
@@ -25,7 +27,7 @@ services:
   postgres_db:
     image: postgres:latest
     environment:
-      POSTGRES_PASSWORD: admin
+      POSTGRES_PASSWORD: P4ssw0rd
       POSTGRES_DB: staycation
     ports:
       - "5432:5432"
