@@ -38,7 +38,7 @@ This project is licensed under the GNU License. For more details, see the [LICEN
 - **Author:** Juan Daniel Vanegas Mayorquin
 - **Program:** Systems Engineering
 - **University:** Universidad Distrital Francisco José de Caldas
-- **Email:** [jurregol@udistrital.edu.co](mailto:jdvanegasm@udistrital.edu.co)
+- **Email:** [jdvanegasm@udistrital.edu.co](mailto:jdvanegasm@udistrital.edu.co)
 
 - **Author:** Josue Urrego Lopez
 - **Program:** Systems Engineering
