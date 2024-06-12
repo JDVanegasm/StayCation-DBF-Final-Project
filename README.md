@@ -22,7 +22,7 @@ In this repository you will find:
   - (Figs): Folder with the technical report, paper and poster imgs
 - **Guidelines:** The project Guidelines given by our teacher
 - **Source (src):** This folder contains the project
-  - Configs: SSL certificade and key (self signed)
+  - Configs: SSL certificate and key (self signed)
   - dbScripts: Database SQL files for MySQL and PostgreSQL
   - Models: Database definition for the web services (API)
   - Main: Endpoints (API)
