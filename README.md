@@ -18,7 +18,7 @@ In this repository you will find:
   - Poster Presentation
   - StayCation Paper
   - Technical Report
-  - Entity Relationshio Diagram
+  - Entity Relationship Diagram
   - (Figs): Folder with the tehcnical report, paper and poster imgs
 - **Guidelines:** The project Guidelines given by our teacher
 - **Source (src):** This folder contains the project
