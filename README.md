@@ -26,7 +26,7 @@ In this repository you will find:
   - dbScripts: Database SQL files for MySQL and PostgreSQL
   - Models: Database definition for the web services (API)
   - Main: Endpoints (API)
-  - Requirements.txt Contains the whole dependencies used in ths project
+  - Requirements.txt Contains the whole dependencies used in this project
   - Dockerfile and docker.compose.yaml
 
 ## License
