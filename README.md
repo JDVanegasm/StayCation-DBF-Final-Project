@@ -19,7 +19,7 @@ In this repository you will find:
   - StayCation Paper
   - Technical Report
   - Entity Relationship Diagram
-  - (Figs): Folder with the tehcnical report, paper and poster imgs
+  - (Figs): Folder with the technical report, paper and poster imgs
 - **Guidelines:** The project Guidelines given by our teacher
 - **Source (src):** This folder contains the project
   - Configs: SSL certificade and key (self signed)
